@@ -98,4 +98,35 @@ public class LibroRepository {
         return book1;
 
     }
+
+    public void deleteBook(int id){
+        //These 3 options are used to remove
+        //an element from an array
+
+        //Option 1
+        Book book = getBookForId(id);
+        if(book != null){
+            listBooks.remove(book);
+        }
+
+        //Option 2
+        int idPosition = 0;
+        for(int i=0;i<listBooks.size();i++){
+            if(listBooks.get(i).getId() == id){
+                idPosition = i;
+                break;//Con esto salgo del bucle
+            }
+        }
+
+        if(idPosition > 0){
+            listBooks.remove(idPosition);
+        }
+
+        //Option 3 with lambda function
+        listBooks.removeIf((x) ->  x.getId()  == id);
+    }
+
+    public int totalBooks(){
+        return listBooks.size();
+    }
 }
