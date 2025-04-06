@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Libro {
+public class Book {
 
     private int id;
     private String isbn;
