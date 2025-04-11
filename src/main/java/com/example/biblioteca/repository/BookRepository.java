@@ -11,7 +11,7 @@ import java.util.List;
 //Se usa para anotar clases que acceden a la base de datos, encapsulan el
 //almacenamiento, recuperación y búsqueda de objetos de dominio.
 
-public class LibroRepository {
+public class BookRepository {
 
     //Arrangement that would keep all the books
     private List<Book> listBooks = new ArrayList<>();
